@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TechnicalInterviewAssignment.Console\**" />
+    <EmbeddedResource Remove="TechnicalInterviewAssignment.Console\**" />
+    <None Remove="TechnicalInterviewAssignment.Console\**" />
+  </ItemGroup>
+
+</Project>
