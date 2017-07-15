@@ -12,3 +12,17 @@ C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment.Tests\bin\Debug
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.dll
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.pdb
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.deps.json
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.runtimeconfig.json
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.runtimeconfig.dev.json
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.pdb
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.csprojResolveAssemblyReference.cache
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.AssemblyInfo.cs
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment.Tests\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.Tests.pdb

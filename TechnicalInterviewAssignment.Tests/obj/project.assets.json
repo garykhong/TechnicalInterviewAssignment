@@ -8548,10 +8548,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment.Tests\\TechnicalInterviewAssignment.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.Tests\\TechnicalInterviewAssignment.Tests.csproj",
       "projectName": "TechnicalInterviewAssignment.Tests",
-      "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment.Tests\\TechnicalInterviewAssignment.Tests.csproj",
-      "outputPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment.Tests\\obj\\",
+      "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.Tests\\TechnicalInterviewAssignment.Tests.csproj",
+      "outputPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -8559,8 +8559,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj": {
-              "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj"
+            "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj": {
+              "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj"
             }
           }
         }

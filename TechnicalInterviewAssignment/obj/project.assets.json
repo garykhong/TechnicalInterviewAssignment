@@ -7080,10 +7080,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj",
+      "projectUniqueName": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj",
       "projectName": "TechnicalInterviewAssignment",
-      "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj",
-      "outputPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\obj\\",
+      "projectPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment.csproj",
+      "outputPath": "C:\\Users\\garykhong\\Documents\\GitHub\\TechnicalInterviewAssignment\\TechnicalInterviewAssignment\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

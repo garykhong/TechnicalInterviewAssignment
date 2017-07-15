@@ -5,3 +5,10 @@ C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\bin\Debug\netco
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.dll
 C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.deps.json
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\bin\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.csprojResolveAssemblyReference.cache
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.AssemblyInfo.cs
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.dll
+C:\Users\garykhong\Documents\GitHub\TechnicalInterviewAssignment\TechnicalInterviewAssignment\obj\Debug\netcoreapp1.1\TechnicalInterviewAssignment.pdb
