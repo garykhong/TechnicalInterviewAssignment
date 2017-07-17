@@ -19,8 +19,7 @@
 
             for (int i = 0; i < Numbers.Length; i++)
             {                
-                shiftedNumbers[GetShiftedIndex(i)] = Numbers[i];
-                shiftedNumbers[GetShiftedIndex(i)] = Numbers[i];
+                shiftedNumbers[GetShiftedIndex(i)] = Numbers[i];                
             }
 
             return shiftedNumbers;
