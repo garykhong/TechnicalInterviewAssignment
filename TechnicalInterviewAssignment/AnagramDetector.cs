@@ -17,17 +17,35 @@ namespace TechnicalInterviewAssignment
 
         public int GetCharacterDeleteCountToMakeAnagram()
         {
-            foreach(char firstStringChar in FirstString)
+            string firstStringToDeleteCommonCharactersFrom = FirstString;
+            string secondStringToDeleteCommonCharactersFrom = SecondString;
+            foreach(char firstStringChar in firstStringToDeleteCommonCharactersFrom)
             {
-                if(SecondString.IndexOf(firstStringChar) >= 0)
+                if(secondStringToDeleteCommonCharactersFrom.
+                    IndexOf(firstStringChar) >= 0)
                 {
-                    FirstString = FirstString.Remove(FirstString.IndexOf(firstStringChar), 1);
-                    SecondString = SecondString.Remove(SecondString.IndexOf(firstStringChar), 1);
+                    firstStringToDeleteCommonCharactersFrom =
+                        RemoveFirstMatchingCharacterFromString(
+                            firstStringToDeleteCommonCharactersFrom,
+                            firstStringChar);
+
+                    secondStringToDeleteCommonCharactersFrom =
+                        RemoveFirstMatchingCharacterFromString(
+                            secondStringToDeleteCommonCharactersFrom,
+                            firstStringChar);
                 }
             }
 
-            return FirstString.Length + SecondString.Length;
-        }       
+            return firstStringToDeleteCommonCharactersFrom.Length + 
+                secondStringToDeleteCommonCharactersFrom.Length;
+        } 
+        
+        private string RemoveFirstMatchingCharacterFromString(
+            string stringToRemoveCharacter, char characterToRemove)
+        {
+            return stringToRemoveCharacter.Remove(
+                            stringToRemoveCharacter.IndexOf(characterToRemove), 1);
+        }
         
     }
 }
