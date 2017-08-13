@@ -51,6 +51,12 @@ namespace TechnicalInterviewAssignment.Tests
         }
 
         [TestMethod]
+        public void TestCaseFour_MatchExpectedOutput()
+        {
+            Assert.AreEqual(false, AreBracketsBalanced("{{}("));
+        }
+
+        [TestMethod]
         public void SampleTestCase_MatchExpectedOutput()
         {
             Assert.AreEqual(true, AreBracketsBalanced("{[()]}"));

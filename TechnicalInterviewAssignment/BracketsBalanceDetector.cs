@@ -46,7 +46,7 @@ namespace TechnicalInterviewAssignment
                         break;
                 }
             }
-            return AreBracketsEvenAmount();
+            return AreBracketsEvenAmount() && leftBrackets.Count == 0;
         }        
 
         private bool AreBracketsEvenAmount()
