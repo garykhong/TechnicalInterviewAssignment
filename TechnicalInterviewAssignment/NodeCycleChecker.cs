@@ -6,9 +6,9 @@ namespace TechnicalInterviewAssignment
 {
     public class NodeCycleChecker
     {
-        private Node headNode;
+        private LinkedListNode headNode;
 
-        public NodeCycleChecker(Node headNode)
+        public NodeCycleChecker(LinkedListNode headNode)
         {
             this.headNode = headNode;
         }
@@ -17,7 +17,7 @@ namespace TechnicalInterviewAssignment
         {
             List<int> nodesVisited = new List<int> { headNode.Data };
 
-            Node nextNode = headNode.NextNode;
+            LinkedListNode nextNode = headNode.NextNode;
             while (nextNode != null)
             {
                 nodesVisited.Add(nextNode.Data);

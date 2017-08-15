@@ -10,7 +10,7 @@ namespace TechnicalInterviewAssignment.Tests
         [TestMethod]
         public void SingleNode_GivesFalse()
         {
-            Node node = new Node(1, null);
+            LinkedListNode node = new LinkedListNode(1, null);
             Assert.AreEqual(false, 
                 DoesNodeHaveCycle(node));
         }
@@ -18,7 +18,7 @@ namespace TechnicalInterviewAssignment.Tests
         [TestMethod]
         public void TwoLinkedNodesBothVisitedOnce_GivesFalse()
         {
-            Node node = new Node(1, new Node(2, null));
+            LinkedListNode node = new LinkedListNode(1, new LinkedListNode(2, null));
             Assert.AreEqual(false,
                 DoesNodeHaveCycle(node));
         }
@@ -26,12 +26,12 @@ namespace TechnicalInterviewAssignment.Tests
         [TestMethod]
         public void TwoLinkedNodesFirstNodeVisitedTwice_GivesTrue()
         {
-            Node node = new Node(1, new Node(2, new Node(1, null)));
+            LinkedListNode node = new LinkedListNode(1, new LinkedListNode(2, new LinkedListNode(1, null)));
             Assert.AreEqual(true,
                 DoesNodeHaveCycle(node));
         }
 
-        private bool DoesNodeHaveCycle(Node headNode)
+        private bool DoesNodeHaveCycle(LinkedListNode headNode)
         {
             NodeCycleChecker checker =
                 new NodeCycleChecker(headNode);
