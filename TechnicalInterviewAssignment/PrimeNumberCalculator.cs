@@ -26,7 +26,7 @@ namespace TechnicalInterviewAssignment
 
             int index = 0;
 
-            for (index = GetStartingIndex(); index < number; index += 2)
+            for (index = GetStartingIndex(); index < Math.Sqrt(number); index += 2)
             {
                 if (number % index == 0)
                 {
