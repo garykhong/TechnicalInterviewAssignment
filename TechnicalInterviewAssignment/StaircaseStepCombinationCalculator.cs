@@ -6,36 +6,36 @@ namespace TechnicalInterviewAssignment
     public class StaircaseStepCombinationCalculator
     {
         private int steps;
-        private int totalCombinations;
+        private Dictionary<int, int> stepCombinations;
 
         public StaircaseStepCombinationCalculator(int steps)
         {
             this.steps = steps;
+            stepCombinations = new Dictionary<int, int>();
         }
 
         public int GetCombinationCount()
         {
-            CalculateStepCombinationCount(0);
-            return totalCombinations;
+            CalculateStepCombinationCount();
+            return stepCombinations[steps];
         }
 
-        private void CalculateStepCombinationCount(int stepsTaken)
+        private void SetStepCombinationsFirstThreeSteps()
         {
-            for(int numberOfStepsToTake = 1; numberOfStepsToTake <= 3; numberOfStepsToTake++)
+            stepCombinations.Add(1, 1);
+            stepCombinations.Add(2, 2);
+            stepCombinations.Add(3, 4);
+        }
+
+        private void CalculateStepCombinationCount()
+        {
+            SetStepCombinationsFirstThreeSteps();
+
+            for (int index = 4; index <= steps; index++)
             {
-                if(stepsTaken == steps)
-                {
-                    totalCombinations += 1;
-                    return;
-                }
-                else if(stepsTaken > steps)
-                {
-                    return;
-                }
-                else if(stepsTaken < steps)
-                {
-                    CalculateStepCombinationCount(stepsTaken + numberOfStepsToTake);
-                }
+                int thisStepCombinationsTotal = 
+                    stepCombinations[index - 3] + stepCombinations[index - 2] + stepCombinations[index - 1];
+                stepCombinations.Add(index, thisStepCombinationsTotal);
             }
         }
     }
