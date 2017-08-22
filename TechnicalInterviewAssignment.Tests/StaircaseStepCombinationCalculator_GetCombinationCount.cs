@@ -20,7 +20,7 @@ namespace TechnicalInterviewAssignment.Tests
                 GetCombinationCount(4));
             Assert.AreEqual(13,
                 GetCombinationCount(5));
-            Assert.AreEqual(7,
+            Assert.AreEqual(24,
                 GetCombinationCount(6));
             Assert.AreEqual(44,
                 GetCombinationCount(7));
