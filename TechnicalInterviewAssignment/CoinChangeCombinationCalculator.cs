@@ -7,75 +7,48 @@ namespace TechnicalInterviewAssignment
     public class CoinChangeCombinationCalculator
     {
         private int moneyToBreak;
-        private int[] changeToGiveInDollars;
-        private Dictionary<string, string> changeCombinations = new Dictionary<string, string>();
-        private int runningTotal;
-        private List<int> changeCombination;
+        private int[] changeDollars;
 
-        public CoinChangeCombinationCalculator(int moneyToBreak, int[] changeToGiveInDollars)
+        public CoinChangeCombinationCalculator(int moneyToBreak, int[] changeDollars)
         {
             this.moneyToBreak = moneyToBreak;
-            this.changeToGiveInDollars = changeToGiveInDollars;
-            this.changeCombination = new List<int>();
-        }
+            this.changeDollars = changeDollars;
+        }        
 
-        public int GetCombinationCount()
+        public int GetCombinationCount(int changeDollarsIndex, Dictionary<string, int> changeCombinations)
         {
-            SetCombinationCount();
-            return changeCombinations.Count;
-        }
+            int runningTotal = 0;
+            int combinations = 0;
 
-        public void SetCombinationCount()
-        {
-            
-            foreach(int changeAmount in changeToGiveInDollars)
-            {                
-                changeCombination.Add(changeAmount);
-                string key = GetChangeCombinationKey(changeCombination);
-                runningTotal += changeAmount;
-                if (runningTotal == moneyToBreak && !changeCombinations.ContainsKey(key))
-                {
-                    changeCombinations.Add(key, string.Empty);                               
-                }
-                else if(runningTotal < moneyToBreak)
-                {
-                    SetCombinationCount();
-                }
-                ResetRunningTotalAndChangeCombinationAtIndex(changeCombination.Count - 1);
-            }
-        }       
-
-        private void ResetRunningTotalAndChangeCombinationAtIndex(int changeAmountIndex)
-        {
-            if(changeAmountIndex >= 0)
+            if(moneyToBreak == 0)
             {
-                runningTotal -= changeCombination[changeAmountIndex];
-                changeCombination.RemoveAt(changeAmountIndex);
-            }            
-        }
-
-        private string GetChangeCombinationKey(List<int> changeCombination)
-        {
-            List<int> sortedChangeCombination = changeCombination.OrderBy(change => change).ToList();
-            
-            string combinationKey = string.Empty;
-
-            int counter = 1;
-            foreach(int change in sortedChangeCombination)
-            {
-                if(counter == sortedChangeCombination.Count)
-                {
-                    combinationKey += change.ToString();
-                }
-                else
-                {
-                    combinationKey += change.ToString() + ",";
-                }
-                
-                counter++;
+                return 1;
             }
 
-            return combinationKey;
+            if(changeDollarsIndex >= changeDollars.Length)
+            {
+                return 0;
+            }
+
+            string key = moneyToBreak.ToString() + "-" + changeDollarsIndex.ToString();
+
+            if(changeCombinations.ContainsKey(key))
+            {
+                return changeCombinations[key];
+            }
+
+            while(runningTotal <= moneyToBreak)
+            {
+                int remainingTotal = moneyToBreak - runningTotal;
+                combinations += new CoinChangeCombinationCalculator(remainingTotal, changeDollars).
+                                                          GetCombinationCount(changeDollarsIndex + 1, 
+                                                                               changeCombinations);
+                runningTotal += changeDollars[changeDollarsIndex];
+            }
+
+            changeCombinations.Add(key, combinations);
+
+            return combinations;
         }
     }
 }
