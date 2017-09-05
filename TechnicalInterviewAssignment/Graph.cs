@@ -13,30 +13,19 @@ namespace TechnicalInterviewAssignment
             this.totalNodes = totalNodes;
         }
 
-        public void AddEdge(int startingNodeValue, int endingNodeValue)
+        public void AddEdge(int firstNodeValue, int secondNodeValue)
         {
-            if (nodes.ContainsKey(startingNodeValue))
-            {
-                nodes[startingNodeValue].Children.Add(
-                    new NodeWithUnlimitedChildren
-                    {
-                        Data = endingNodeValue
-                    }
-                    );
+            AddNodeToTree(firstNodeValue);
+            AddNodeToTree(secondNodeValue);
+            nodes[firstNodeValue].AddNodeToChildren(nodes[secondNodeValue]);
+            nodes[secondNodeValue].AddNodeToChildren(nodes[firstNodeValue]);
+        }
 
-            }
-            else
+        private void AddNodeToTree(int nodeValue)
+        {
+            if (!nodes.ContainsKey(nodeValue))
             {
-                nodes.Add(startingNodeValue, new NodeWithUnlimitedChildren
-                {
-                    Data = startingNodeValue,
-                    Children = {
-                        new NodeWithUnlimitedChildren
-                        {
-                            Data = endingNodeValue
-                        }
-                    }
-                });
+                nodes.Add(nodeValue, new NodeWithUnlimitedChildren() { Data = nodeValue });
             }
         }
 
@@ -45,36 +34,58 @@ namespace TechnicalInterviewAssignment
             int[] distancesFromNode = new int[totalNodes - 1];
             NodeWithUnlimitedChildren node = nodes[startingNodeValue];
             int distanceFromNodeIndex = 0;
-            for(int nodeValue = 1; nodeValue <= totalNodes; nodeValue++)
+            for (int nodeValue = 1; nodeValue <= totalNodes; nodeValue++)
             {
-                if(nodeValue != startingNodeValue)
+                if (nodeValue != startingNodeValue)
                 {
-                    distancesFromNode[distanceFromNodeIndex] = GetDistanceFromNode(nodeValue, node);
+                    distancesFromNode[distanceFromNodeIndex] = GetDistanceFromNode(nodeValue, node, new HashSet<int>(), 0);
                     distanceFromNodeIndex++;
-                }                
+                }
             }
             return distancesFromNode;
         }
 
-        private int GetDistanceFromNode(int nodeValue, NodeWithUnlimitedChildren node)
-        {
-            int distanceTravelled = 0;
-            if(node.Data == nodeValue)
+        private int GetDistanceFromNode(int nodeValue, NodeWithUnlimitedChildren node, 
+                                          HashSet<int> nodeValuesVisited, int distanceTravelled)
+        {            
+            if (node.Data == nodeValue)
             {
-                return 0;
+                return distanceTravelled;
             }
 
-            foreach (NodeWithUnlimitedChildren childNode in node.Children)
+
+            if (node.Children.ContainsKey(nodeValue))
             {
-                if (childNode.Data == nodeValue)
-                {
-                    return 6;
-                }
+                return distanceTravelled + 6;
             }
 
-            foreach(NodeWithUnlimitedChildren childNode in node.Children)
+            int lowestDistanceTravelled = int.MaxValue;
+            foreach (KeyValuePair<int, NodeWithUnlimitedChildren> childNode in node.Children)
             {
-                distanceTravelled += GetDistanceFromNode(nodeValue, childNode);
+                if(!nodeValuesVisited.Contains(childNode.Value.Data))
+                {                    
+                    nodeValuesVisited.Add(childNode.Value.Data);
+                    int distanceFromNode = GetDistanceFromNode(nodeValue, childNode.Value, 
+                                                               nodeValuesVisited, distanceTravelled + 6);
+                    if(distanceFromNode > -1)
+                    {
+                        distanceTravelled += distanceFromNode;
+                    }
+                    else
+                    {
+                        distanceTravelled = int.MaxValue;
+                    }
+
+                    if(distanceTravelled < lowestDistanceTravelled)
+                    {
+                        lowestDistanceTravelled = distanceTravelled;
+                    }
+                }                
+            }
+
+            if(lowestDistanceTravelled != int.MaxValue)
+            {
+                return lowestDistanceTravelled;
             }
 
             return -1;

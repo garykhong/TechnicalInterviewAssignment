@@ -26,6 +26,20 @@ namespace TechnicalInterviewAssignment.Tests
                 GetDistancesFromNode(graph, 2));
         }
 
+        [TestMethod]
+        public void TestCase3_GivesExpectedResults()
+        {
+            Graph graph = new Graph(10);            
+            graph.AddEdge(3, 1);
+            graph.AddEdge(10, 1);
+            graph.AddEdge(10, 1);
+            graph.AddEdge(3, 1);
+            graph.AddEdge(1, 8);
+            graph.AddEdge(5, 2);
+            CollectionAssert.AreEqual(new int[] { 6, -1, -1, -1, -1, -1, 12, -1, 12 },
+                GetDistancesFromNode(graph, 3));
+        }
+
         private int[] GetDistancesFromNode(Graph graph, int nodeValue)
         {
             return graph.GetDistancesFromNode(nodeValue);
